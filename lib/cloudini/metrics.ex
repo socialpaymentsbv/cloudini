@@ -1,8 +1,8 @@
 defmodule Cloudini.Metrics do
   defmacro with_metrics(action, do: do_clause) do
-    action_spiral = "cloudini.resp.#{action}"
-    fail_spiral = "cloudini.resp_failed.#{action}"
-    action_timed = "cloudini.resp_time.#{action}"
+    action_spiral = "cloudini.req.#{action}"
+    fail_spiral = "cloudini.req.#{action}.failure"
+    action_timed = "cloudini.req.#{action}.time"
 
     quote do
       action_fn = fn ->
