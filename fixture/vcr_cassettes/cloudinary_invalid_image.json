@@ -1,0 +1,43 @@
+[
+  {
+    "request": {
+      "body": "--------------BOUNDARY42\r\nContent-Disposition: form-data; name=\"signature\"\r\n\r\nEFE2DE7ED4A844E73032A1F55F930DDFEC1CE2B1\r\n--------------BOUNDARY42\r\nContent-Disposition: form-data; name=\"timestamp\"\r\n\r\n1466428416152951598\r\n--------------BOUNDARY42\r\nContent-Disposition: form-data; name=\"api_key\"\r\n\r\n756743333742396\r\n--------------BOUNDARY42\r\nContent-Disposition: form-data; name=\"public_id\"\r\n\r\ninvalid_test_image\r\n--------------BOUNDARY42\r\nContent-Disposition: form-data; name=\"file\"; filename=\"not-an-image.gif\"\r\nContent-Type: application/octet-stream\r\n\r\nseriously\n\r\n--------------BOUNDARY42--\r\n",
+      "headers": {
+        "Content-Length": "592"
+      },
+      "method": "post",
+      "options": {
+        "httpc_options": {
+          "body_format": "binary"
+        },
+        "http_options": {
+          "timeout": "3000",
+          "connect_timeout": "30000"
+        }
+      },
+      "request_body": "",
+      "url": "https://api.cloudinary.com/v1_1/clubbase-test/image/upload"
+    },
+    "response": {
+      "body": "{\"error\":{\"message\":\"Invalid image file\"}}",
+      "headers": {
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "date": "Mon, 20 Jun 2016 13:13:35 GMT",
+        "server": "cloudinary",
+        "content-length": "42",
+        "content-type": "application/json; charset=utf-8",
+        "status": "400 Bad Request",
+        "x-cld-error": "Invalid image file",
+        "x-request-id": "dd81953993192185",
+        "x-ua-compatible": "IE=Edge,chrome=1"
+      },
+      "status_code": [
+        "HTTP/1.1",
+        400,
+        "Bad Request"
+      ],
+      "type": "ok"
+    }
+  }
+]
