@@ -1,6 +1,7 @@
 defmodule Cloudini.HttpcClient do
   defstruct(
     base: nil,
+    base_fetch: nil,
     name: nil,
     key: nil,
     secret: nil,

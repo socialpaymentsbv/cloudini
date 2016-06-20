@@ -1,5 +1,5 @@
 defmodule Cloudini.StubClient do
-  defstruct stub_requests: true
+  defstruct stub_requests: true, base_fetch: "http://example.com/"
 end
 
 defimpl Cloudini.ClientAPI, for: Cloudini.StubClient do
