@@ -13,9 +13,9 @@ defmodule CloudiniTest do
     client = Cloudini.new(
       "https://api.cloudinary.com/v1_1",
       "https://res.cloudinary.com",
-      "anon-test",
-      "756743333742396",
-      "QvaBZLwjinBsVN2wL1hUhyub_v8"
+      "cloudini-test",
+      "745714418979135",
+      "yHSJz9IB73vefScZly4UmthCylw"
     )
 
     {:ok, client: client}
