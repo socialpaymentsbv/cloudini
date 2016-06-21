@@ -19,14 +19,13 @@ defmodule Cloudini do
   end
 
   def new do
-    cloudini_config = Application.get_env(:cloudini)
-    with base = Keyword.get(cloudini_config, :base_uri, @default_base),
-         base_fetch = Keyword.get(cloudini_config, :base_fetch, @default_base_fetch),
-         http_options = Keyword.get(cloudini_config, :http_options, []),
-         {:ok, name} <- Keyword.fetch(cloudini_config, :name),
-         {:ok, key} <- Keyword.fetch(cloudini_config, :api_key),
-         {:ok, secret} <- Keyword.fetch(cloudini_config, :api_secret),
-         {:ok, stub_requests} <- Keyword.fetch(cloudini_config, :stub_requests),
+    with base = Application.get_env(:cloudini, :base_uri, @default_base),
+         base_fetch = Application.get_env(:cloudini, :base_fetch, @default_base_fetch),
+         http_options = Application.get_env(:cloudini, :http_options, []),
+         name = Application.fetch_env!(:cloudini, :name),
+         key = Application.fetch_env!(:cloudini, :api_key),
+         secret = Application.fetch_env!(:cloudini, :api_secret),
+         stub_requests = Application.fetch_env!(:cloudini, :stub_requests),
       do: new(base, base_fetch, name, key, secret,
             stub_requests: stub_requests,
             http_options: http_options,
