@@ -6,12 +6,12 @@ For the time being, only image upload and deletion are supported.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+The package can be installed in a following steps:
 
   1. Add cloudini to your list of dependencies in `mix.exs`:
 
         def deps do
-          [{:cloudini, "https://github.com/socialpaymentsbv/cloudini.git"}]
+          [{:cloudini, git: "https://github.com/socialpaymentsbv/cloudini.git", branch: "master"}]
         end
 
   2. Configure cloudini in `config/config.exs`:
@@ -35,5 +35,5 @@ Basic Cloudindary API usage:
 
 Helpers for building URLs:
 
-  * `fetch_url(client, "http://picture.from.internet.to.be.fetch.by.cloudinary.gif")`
+  * `fetch_url(client, "http://picture.from.internet.to.fetch.by.cloudinary.gif")`
   * `transform_url(client, "http://res.cloudinary.com/...", mode: "fill", width: 200)`
