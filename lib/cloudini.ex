@@ -11,7 +11,7 @@ defmodule Cloudini do
     http_options = Keyword.get(opts, :http_options, [])
 
     case stub_requests do
-      true -> %Cloudini.StubClient{}
+      true -> %Cloudini.StubClient{base_fetch: @default_base_fetch}
       _ -> %Cloudini.HttpcClient{base: base, base_fetch: base_fetch,
                                 name: name, key: key, secret: secret,
                                 http_options: http_options}
