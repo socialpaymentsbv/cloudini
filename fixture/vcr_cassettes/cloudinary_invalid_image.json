@@ -1,7 +1,7 @@
 [
   {
     "request": {
-      "body": "--------------BOUNDARYCAPvPOmwbPIzx_5eq7xsK9Off6O66Kc-reVtbOjB-ugr9WueJxnYayZ80_ilk8km\r\nContent-Disposition: form-data; name=\"signature\"\r\n\r\nB9107B3753F56EF44E382A27EF3D7BE0AFAFC094\r\n--------------BOUNDARYCAPvPOmwbPIzx_5eq7xsK9Off6O66Kc-reVtbOjB-ugr9WueJxnYayZ80_ilk8km\r\nContent-Disposition: form-data; name=\"timestamp\"\r\n\r\n1466494801586859194\r\n--------------BOUNDARYCAPvPOmwbPIzx_5eq7xsK9Off6O66Kc-reVtbOjB-ugr9WueJxnYayZ80_ilk8km\r\nContent-Disposition: form-data; name=\"api_key\"\r\n\r\n745714418979135\r\n--------------BOUNDARYCAPvPOmwbPIzx_5eq7xsK9Off6O66Kc-reVtbOjB-ugr9WueJxnYayZ80_ilk8km\r\nContent-Disposition: form-data; name=\"public_id\"\r\n\r\ninvalid_test_image\r\n--------------BOUNDARYCAPvPOmwbPIzx_5eq7xsK9Off6O66Kc-reVtbOjB-ugr9WueJxnYayZ80_ilk8km\r\nContent-Disposition: form-data; name=\"file\"; filename=\"not-an-image.gif\"\r\nContent-Type: application/octet-stream\r\n\r\nseriously\n\r\n--------------BOUNDARYCAPvPOmwbPIzx_5eq7xsK9Off6O66Kc-reVtbOjB-ugr9WueJxnYayZ80_ilk8km--\r\n",
+      "body": "--------------BOUNDARYi35kjTgMS3eJMBhOlW8FTRV5i1o-Nt_clU2q0zOnAfd2pQq7XaGfZQqI-COCQhlc\r\nContent-Disposition: form-data; name=\"signature\"\r\n\r\n567612E95D9171A4BFF4A4D8BE3020F793BCFD74\r\n--------------BOUNDARYi35kjTgMS3eJMBhOlW8FTRV5i1o-Nt_clU2q0zOnAfd2pQq7XaGfZQqI-COCQhlc\r\nContent-Disposition: form-data; name=\"timestamp\"\r\n\r\n1466505544735113878\r\n--------------BOUNDARYi35kjTgMS3eJMBhOlW8FTRV5i1o-Nt_clU2q0zOnAfd2pQq7XaGfZQqI-COCQhlc\r\nContent-Disposition: form-data; name=\"api_key\"\r\n\r\n727468625589788\r\n--------------BOUNDARYi35kjTgMS3eJMBhOlW8FTRV5i1o-Nt_clU2q0zOnAfd2pQq7XaGfZQqI-COCQhlc\r\nContent-Disposition: form-data; name=\"public_id\"\r\n\r\ninvalid_test_image\r\n--------------BOUNDARYi35kjTgMS3eJMBhOlW8FTRV5i1o-Nt_clU2q0zOnAfd2pQq7XaGfZQqI-COCQhlc\r\nContent-Disposition: form-data; name=\"file\"; filename=\"not-an-image.gif\"\r\nContent-Type: application/octet-stream\r\n\r\nseriously\n\r\n--------------BOUNDARYi35kjTgMS3eJMBhOlW8FTRV5i1o-Nt_clU2q0zOnAfd2pQq7XaGfZQqI-COCQhlc--\r\n",
       "headers": {
         "Content-Length": "964"
       },
@@ -23,13 +23,13 @@
       "headers": {
         "cache-control": "no-cache",
         "connection": "keep-alive",
-        "date": "Tue, 21 Jun 2016 07:40:01 GMT",
+        "date": "Tue, 21 Jun 2016 10:39:04 GMT",
         "server": "cloudinary",
         "content-length": "42",
         "content-type": "application/json; charset=utf-8",
         "status": "400 Bad Request",
         "x-cld-error": "Invalid image file",
-        "x-request-id": "03e3f56fa27d46d1",
+        "x-request-id": "16529db6941e1b79",
         "x-ua-compatible": "IE=Edge,chrome=1"
       },
       "status_code": [

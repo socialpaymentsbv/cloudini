@@ -14,8 +14,8 @@ defmodule CloudiniTest do
       "https://api.cloudinary.com/v1_1",
       "https://res.cloudinary.com",
       "cloudini-test",
-      "745714418979135",
-      "yHSJz9IB73vefScZly4UmthCylw"
+      "727468625589788",
+      "MGrVnOPp6Cce1VBPaAwb94hVP0o"
     )
 
     {:ok, client: client}
@@ -88,10 +88,10 @@ defmodule CloudiniTest do
   end
 
   test "removal of non-existing picture does not crash", context do
-    use_cassette "cloudinary_remove_existing_image" do
+    use_cassette "cloudinary_remove_non_existing_image" do
       {:ok, result} = Cloudini.delete_image(context.client, "non_existent_picture")
 
-      assert %{"result" => "ok"} = result
+      assert %{"result" => "not found"} = result
     end
   end
 

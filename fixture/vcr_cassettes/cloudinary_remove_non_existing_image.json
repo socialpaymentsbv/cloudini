@@ -1,0 +1,43 @@
+[
+  {
+    "request": {
+      "body": "--------------BOUNDARYOp3qkLLcWTgq0QKEuXazBpQSle4Gip-rS1A2qAIGtq60ZJWOqsf911HusLqOH-1r\r\nContent-Disposition: form-data; name=\"signature\"\r\n\r\n80B953C5D7ADA72C7F072EB00357908778BC91C0\r\n--------------BOUNDARYOp3qkLLcWTgq0QKEuXazBpQSle4Gip-rS1A2qAIGtq60ZJWOqsf911HusLqOH-1r\r\nContent-Disposition: form-data; name=\"timestamp\"\r\n\r\n1466505542628315645\r\n--------------BOUNDARYOp3qkLLcWTgq0QKEuXazBpQSle4Gip-rS1A2qAIGtq60ZJWOqsf911HusLqOH-1r\r\nContent-Disposition: form-data; name=\"api_key\"\r\n\r\n727468625589788\r\n--------------BOUNDARYOp3qkLLcWTgq0QKEuXazBpQSle4Gip-rS1A2qAIGtq60ZJWOqsf911HusLqOH-1r\r\nContent-Disposition: form-data; name=\"public_id\"\r\n\r\nnon_existent_picture\r\n--------------BOUNDARYOp3qkLLcWTgq0QKEuXazBpQSle4Gip-rS1A2qAIGtq60ZJWOqsf911HusLqOH-1r--\r\n",
+      "headers": {
+        "Content-Length": "750"
+      },
+      "method": "post",
+      "options": {
+        "httpc_options": {
+          "body_format": "binary"
+        },
+        "http_options": {
+          "timeout": "3000",
+          "connect_timeout": "30000"
+        }
+      },
+      "request_body": "",
+      "url": "https://api.cloudinary.com/v1_1/cloudini-test/image/destroy"
+    },
+    "response": {
+      "body": "{\"result\":\"not found\"}",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "connection": "keep-alive",
+        "date": "Tue, 21 Jun 2016 10:39:03 GMT",
+        "etag": "\"33747e3f086d5dd0aef7ac1fde8cf595\"",
+        "server": "cloudinary",
+        "content-length": "22",
+        "content-type": "application/json; charset=utf-8",
+        "status": "200 OK",
+        "x-request-id": "2b7e93eff527005d",
+        "x-ua-compatible": "IE=Edge,chrome=1"
+      },
+      "status_code": [
+        "HTTP/1.1",
+        200,
+        "OK"
+      ],
+      "type": "ok"
+    }
+  }
+]
