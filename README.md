@@ -11,7 +11,7 @@ The package can be installed in a following steps:
   1. Add cloudini to your list of dependencies in `mix.exs`:
 
         def deps do
-          [{:cloudini, git: "https://github.com/socialpaymentsbv/cloudini.git", branch: "master"}]
+          [{:cloudini, "~> 1.0"}]
         end
 
   2. Configure cloudini in `config/config.exs`:
