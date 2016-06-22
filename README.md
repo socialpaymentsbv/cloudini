@@ -1,5 +1,7 @@
 # Cloudini
 
+![TravisCI](https://travis-ci.org/socialpaymentsbv/cloudini.svg?branch=master)
+
 Wrapper client library for [Cloudinary API](http://cloudinary.com).
 
 For the time being, only image upload and deletion are supported.
