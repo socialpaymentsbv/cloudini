@@ -7,7 +7,10 @@ defmodule Cloudini.Mixfile do
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     description: "Cloudinary client",
+     package: package,
+     deps: deps,
+     docs: [extras: ["README.md"]]]
   end
 
   # Configuration for the OTP application
@@ -30,5 +33,11 @@ defmodule Cloudini.Mixfile do
     [{:poison, "~> 2.0"},
      {:quintana, "~> 0.2.1"},
      {:exvcr, "~> 0.7.4", only: [:dev, :test]}]
+  end
+
+  defp package do
+    [maintainers: ["Adrian Gruntkowski", "Adam Rutkowski"],
+     licenses: ["MIT"],
+     links: %{"GitHub" => "https://github.com/socialpaymentsbv/cloudini"}]
   end
 end
