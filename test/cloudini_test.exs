@@ -3,7 +3,7 @@ defmodule CloudiniTest do
   use ExVCR.Mock, adapter: ExVCR.Adapter.Httpc
 
   @sample_cloudinary_url "https://res.cloudinary.com/dc1obyxe2/image/upload/v1455616309/fa9293cb-2852-44f5-be72-bb7bcc8f155a.gif"
-  @sample_cloudinary_fetch "https://res.cloudinary.com/demo/image/fetch/https://img.youtube.com/vi/mmW0v7GBNJw/default.jp://res.cloudinary.com/demo/image/fetch/g_face,h_80,c_fill,w_80/https://img.youtube.com/vi/mmW0v7GBNJw/default.jpg"
+  @sample_cloudinary_fetch "https://res.cloudinary.com/demo/image/fetch/https://img.youtube.com/vi/mmW0v7GBNJw/default.jpg"
 
   @valid_trans_opts %{"width" => "300", "height" => "600", "dpr" => "2",
                       "mode" => "crop", "gravity" => "face"}
