@@ -8,13 +8,21 @@ For the time being, only image upload and deletion are supported.
 
 The package can be installed in a following steps:
 
-  1. Add cloudini to your list of dependencies in `mix.exs`:
+  1. Add `cloudini` to your list of dependencies in `mix.exs`:
 
         def deps do
           [{:cloudini, "~> 1.0"}]
         end
 
-  2. Configure cloudini in `config/config.exs`:
+  2. Ensure `cloudini` is started before your application:
+
+   ```elixir
+   def application do
+      [applications: [:cloudini]]
+   end
+   ```
+
+  3. Configure cloudini in `config/config.exs`:
 
         config :cloudini,
           name: "CLOUDINARYNAME",
