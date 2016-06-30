@@ -20,6 +20,19 @@ defmodule Cloudini.URL do
         else
           image_url
         end
+      [head, name, "raw", op, rest] when op in ["upload", "fetch"] ->
+        if List.last(String.split(rest, ".")) == "pdf" do
+          trans_opts = generate_transformation_string(trans_opts)
+          if trans_opts != "" do
+            new_path =
+              [head, name, "image", op, trans_opts, rest]
+              |> Enum.join("/")
+
+            URI.to_string(%URI{uri | path: new_path})
+          else
+            image_url
+          end
+        end
     end
   end
 
