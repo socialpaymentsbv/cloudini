@@ -3,6 +3,7 @@ defmodule CloudiniTest do
   use ExVCR.Mock, adapter: ExVCR.Adapter.Httpc
 
   @sample_cloudinary_url "https://res.cloudinary.com/dc1obyxe2/image/upload/v1455616309/fa9293cb-2852-44f5-be72-bb7bcc8f155a.gif"
+  @sample_cloudinary_pdf_url "https://res.cloudinary.com/clubbase-test/raw/upload/v1467299479/4c51acc7-69dc-47c5-bca8-3ba08d72a39c_1467299474649.pdf"
   @sample_cloudinary_fetch "https://res.cloudinary.com/demo/image/fetch/https://img.youtube.com/vi/mmW0v7GBNJw/default.jpg"
 
   @valid_trans_opts %{"width" => "300", "height" => "600", "dpr" => "2",
@@ -33,6 +34,12 @@ defmodule CloudiniTest do
 
   test "generates valid cloudinary transformation API URL from opts", context do
     url = Cloudini.transform_url(context.client, @sample_cloudinary_url, @valid_trans_opts)
+    cloudinary_opts = extract_cloudinary_opts(url)
+    assert cloudinary_opts == Enum.sort(@valid_cloudinary_opts)
+  end
+
+  test "generates valid cloudinary transformation API URL from opts when image is a PDF", context do
+    url = Cloudini.transform_url(context.client, @sample_cloudinary_pdf_url, @valid_trans_opts)
     cloudinary_opts = extract_cloudinary_opts(url)
     assert cloudinary_opts == Enum.sort(@valid_cloudinary_opts)
   end
