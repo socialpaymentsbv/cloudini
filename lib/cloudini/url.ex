@@ -9,30 +9,24 @@ defmodule Cloudini.URL do
     path_elements = uri.path |> String.split("/", parts: 5)
 
     case path_elements do
-      [head, name, "image", op, rest] when op in ["upload", "fetch"] ->
-        trans_opts = generate_transformation_string(trans_opts)
-        if trans_opts != "" do
-          new_path =
-            [head, name, "image", op, trans_opts, rest]
-            |> Enum.join("/")
+      [_head, _name, type, op, _rest]
+        when op in ["upload", "fetch"]
+        and type in ["raw", "image"] ->
+          path_elements
+          |> do_transform(uri, image_url, trans_opts)
+    end
+  end
 
-          URI.to_string(%URI{uri | path: new_path})
-        else
-          image_url
-        end
-      [head, name, "raw", op, rest] when op in ["upload", "fetch"] ->
-        if Path.extname(rest) == ".pdf" do
-          trans_opts = generate_transformation_string(trans_opts)
-          if trans_opts != "" do
-            new_path =
-              [head, name, "image", op, trans_opts, rest]
-              |> Enum.join("/")
+  defp do_transform([head, name, _, op, rest], uri, image_url, trans_opts) do
+    trans_opts = generate_transformation_string(trans_opts)
+    if trans_opts != "" do
+      new_path =
+        [head, name, "image", op, trans_opts, rest]
+        |> Enum.join("/")
 
-            URI.to_string(%URI{uri | path: new_path})
-          else
-            image_url
-          end
-        end
+      URI.to_string(%URI{uri | path: new_path})
+    else
+      image_url
     end
   end
 
