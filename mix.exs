@@ -20,7 +20,7 @@ defmodule Cloudini.Mixfile do
   defp deps do
     [{:poison, "~> 2.0"},
      {:quintana, "~> 0.2.1"},
-     {:exvcr, "~> 0.8", only: [:dev, :test]}]
+     {:exvcr, "~> 0.8", only: [:test]}]
   end
 
   defp package do
