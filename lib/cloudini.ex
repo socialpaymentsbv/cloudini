@@ -40,6 +40,10 @@ defmodule Cloudini do
     Cloudini.URL.transform(client, image_url, opts)
   end
 
+  def generate_transformation_string(opts \\ []) do
+    Cloudini.URL.generate_transformation_string(opts)
+  end
+
   def version(client) do
     with_metrics "version" do
       ClientAPI.version(client)
