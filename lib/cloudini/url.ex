@@ -36,7 +36,7 @@ defmodule Cloudini.URL do
     end
   end
 
-  defp generate_transformation_string(opts) do
+  def generate_transformation_string(opts) do
     opts
     |> Enum.map(&trans_opt/1)
     |> Enum.reject(&is_nil/1)
