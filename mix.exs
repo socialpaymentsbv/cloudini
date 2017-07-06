@@ -14,12 +14,11 @@ defmodule Cloudini.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :crypto, :quintana]]
+    [applications: [:logger, :crypto]]
   end
 
   defp deps do
     [{:poison, "~> 2.0"},
-     {:quintana, "~> 0.2.1"},
      {:exvcr, "~> 0.8", only: [:test]}]
   end
 
