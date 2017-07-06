@@ -1,26 +1,19 @@
 defmodule Cloudini.Metrics do
-  defmacro with_metrics(action, do: do_clause) do
-    action_spiral = "cloudini.req.#{action}"
-    fail_spiral = "cloudini.req.#{action}.failure"
-    action_timed = "cloudini.req.#{action}.time"
+
+  defmacro with_metrics(do: block) do
+    action =
+      __CALLER__.function
+      |> elem(0)
+      |> Atom.to_string
 
     quote do
-      action_fn = fn ->
-        unquote(do_clause)
-      end
+      pre_hook = Application.get_env(:clubbase, :metrics_pre_hook, &(&1))
+      post_hook = Application.get_env(:clubbase, :metrics_post_hook, &(&1))
 
-      timer = :quintana.begin_timed unquote(action_timed)
-      result = action_fn.()
-      :ok = :quintana.notify_timed timer
-      :ok = :quintana.notify_spiral unquote(action_spiral), 1
-
-      case result do
-        {:error, _} ->
-          :ok = :quintana.notify_spiral unquote(fail_spiral), 1
-          result
-        _ ->
-          result
-      end
+      pre_result = pre_hook.(unquote(action))
+      result = unquote(block)
+      post_hook.({pre_result, unquote(action)})
+      result
     end
   end
 end
