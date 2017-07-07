@@ -3,7 +3,7 @@ defmodule Cloudini.Mixfile do
 
   def project do
     [app: :cloudini,
-     version: "1.1.1",
+     version: "1.2.0",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
