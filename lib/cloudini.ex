@@ -1,8 +1,6 @@
 defmodule Cloudini do
   alias Cloudini.ClientAPI
 
-  import Cloudini.Metrics, only: [with_metrics: 1]
-
   @default_base "https://api.cloudinary.com/v1_1"
   @default_base_fetch "https://res.cloudinary.com"
 
@@ -45,20 +43,14 @@ defmodule Cloudini do
   end
 
   def version(client) do
-    with_metrics do
-      ClientAPI.version(client)
-    end
+    ClientAPI.version(client)
   end
 
   def upload_image(client, path, opts \\ []) do
-    with_metrics do
-      ClientAPI.upload_image(client, path, opts)
-    end
+    ClientAPI.upload_image(client, path, opts)
   end
 
   def delete_image(client, public_id, opts \\ []) do
-    with_metrics do
-      ClientAPI.delete_image(client, public_id, opts)
-    end
+    ClientAPI.delete_image(client, public_id, opts)
   end
 end
