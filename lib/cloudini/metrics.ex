@@ -7,8 +7,8 @@ defmodule Cloudini.Metrics do
       |> Atom.to_string
 
     quote do
-      pre_hook = Application.get_env(:clubbase, :metrics_pre_hook, &(&1))
-      post_hook = Application.get_env(:clubbase, :metrics_post_hook, &(&1))
+      pre_hook = Application.get_env(:cloudini, :metrics_pre_hook, &(&1))
+      post_hook = Application.get_env(:cloudini, :metrics_post_hook, &(&1))
 
       pre_result = pre_hook.(unquote(action))
       result = unquote(block)
