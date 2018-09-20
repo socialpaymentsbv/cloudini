@@ -26,6 +26,14 @@ defimpl Cloudini.ClientAPI, for: Cloudini.HttpcClient do
     request(client, :post, "/image/upload", opts)
   end
 
+  def upload_video(client, path, opts \\ []) do
+    {:ok, data} = :file.read_file(path)
+    name = :filename.basename(path)
+    opts = [{:files, [{:file, name, data}]} | opts]
+
+    request(client, :post, "/video/upload", opts)
+  end
+
   def delete_image(client, public_id, opts \\ []) do
     opts = [{:public_id, public_id} | opts]
 
