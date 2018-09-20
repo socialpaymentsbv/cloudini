@@ -50,6 +50,10 @@ defmodule Cloudini do
     ClientAPI.upload_image(client, path, opts)
   end
 
+  def upload_video(client, path, opts \\ []) do
+    ClientAPI.upload_video(client, path, opts)
+  end
+
   def delete_image(client, public_id, opts \\ []) do
     ClientAPI.delete_image(client, public_id, opts)
   end
